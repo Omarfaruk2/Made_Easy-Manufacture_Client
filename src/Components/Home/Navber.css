@@ -1,0 +1,30 @@
+.navbarextra-end {
+    width: 50%;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.customlink-head div {
+    /* font-size: 20px; */
+    margin: 00 20px;
+    /* padding: 20px; */
+    /* color: rgba(red, green, blue, alpha); */
+}
+
+.customlink-head div a,
+.logoutbutton {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.logoutbutton {
+    color: purple;
+}
+
+.customlink-head div a:hover {
+    color: white;
+
+}
