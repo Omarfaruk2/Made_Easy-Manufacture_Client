@@ -21,7 +21,7 @@ const Orderitems = () => {
     const { id } = param
 
     const { isLoading, error, data } = useQuery(['singleData'], () =>
-        fetch(`http://localhost:5000/items/${id}`).then(res =>
+        fetch(`https://cryptic-badlands-38526.herokuapp.com/items/${id}`).then(res =>
             res.json()
         )
     )
@@ -43,7 +43,7 @@ const Orderitems = () => {
         console.log(voo)
 
 
-        const url = "http://localhost:5000/orders"
+        const url = "https://cryptic-badlands-38526.herokuapp.com/orders"
         fetch(url, {
             method: 'POST',
             headers: {

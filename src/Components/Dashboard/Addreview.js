@@ -24,7 +24,7 @@ const Addreview = () => {
         console.log(review)
 
 
-        const url = "http://localhost:5000/reviews"
+        const url = "https://cryptic-badlands-38526.herokuapp.com/reviews"
         fetch(url, {
             method: 'POST',
             headers: {

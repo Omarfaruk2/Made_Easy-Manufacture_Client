@@ -8,7 +8,7 @@ const AllOrder = () => {
 
     const [user, loading,] = useAuthState(auth)
     const { isLoading, error, data } = useQuery(['Allorder'], () =>
-        fetch("http://localhost:5000/orders",).then(res =>
+        fetch("https://cryptic-badlands-38526.herokuapp.com/orders",).then(res =>
             res.json()
         )
     )

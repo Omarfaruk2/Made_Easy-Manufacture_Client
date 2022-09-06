@@ -15,7 +15,7 @@ const Myorder = () => {
     const email = user?.email
 
     const { isLoading, error, data, refetch } = useQuery(['myorders'], () =>
-        fetch(`http://localhost:5000/myitems?email=${email}`, {
+        fetch(`https://cryptic-badlands-38526.herokuapp.com/myitems?email=${email}`, {
             method: "GET",
             headers: {
                 "authorization": `Bearer ${localStorage.getItem("accessToken")}`
@@ -58,7 +58,7 @@ const Myorder = () => {
                         icon: "success",
                     })
 
-                    const url = `http://localhost:5000/myitems/${id}`
+                    const url = `https://cryptic-badlands-38526.herokuapp.com/myitems/${id}`
                     fetch(url, {
                         method: "DELETE"
                     })

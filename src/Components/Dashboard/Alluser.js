@@ -14,7 +14,7 @@ const Alluser = () => {
     // start--------------------------------------------------------------------------------
 
     const { isLoading, error, data, refetch } = useQuery(['alluserdata'], () =>
-        fetch('http://localhost:5000/user', {
+        fetch('https://cryptic-badlands-38526.herokuapp.com/user', {
             method: "GET",
             headers: {
                 "authorization": `Bearer ${localStorage.getItem("accessToken")}`
@@ -44,7 +44,7 @@ const Alluser = () => {
     // start--------------------------------------------------------------------------------
 
     const makeAdmin = (email) => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://cryptic-badlands-38526.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 "authorization": `Bearer ${localStorage.getItem("accessToken")}`

@@ -14,7 +14,7 @@ const CheckoutForm = ({ data }) => {
     const { totalprice, email, _id } = data
 
     useEffect(() => {
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://cryptic-badlands-38526.herokuapp.com/create-payment-intent", {
             method: "POST",
             headers: {
                 'content-type': "application/json",
@@ -86,7 +86,7 @@ const CheckoutForm = ({ data }) => {
                 transactionId: paymentIntent.id
             }
 
-            fetch(`http://localhost:5000/myitems/${_id}`, {
+            fetch(`https://cryptic-badlands-38526.herokuapp.com/myitems/${_id}`, {
                 method: "PATCH",
                 headers: {
                     'content-type': "application/json",

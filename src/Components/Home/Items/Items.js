@@ -7,7 +7,7 @@ import SingleItems from './SingleItems'
 const Items = () => {
 
     const { isLoading, error, data } = useQuery(['repoData'], () =>
-        fetch('http://localhost:5000/items').then(res =>
+        fetch('https://cryptic-badlands-38526.herokuapp.com/items').then(res =>
             res.json()
         )
     )
