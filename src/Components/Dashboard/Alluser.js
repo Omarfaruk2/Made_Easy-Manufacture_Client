@@ -139,7 +139,7 @@ const Alluser = () => {
                     })
 
 
-                    const url = `http://localhost:5000/user/${id}`
+                    const url = `https://cryptic-badlands-38526.herokuapp.com/user/${id}`
                     console.log(id)
                     fetch(url, {
                         method: "DELETE"

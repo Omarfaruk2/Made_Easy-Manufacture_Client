@@ -28,7 +28,7 @@ const AllOrder = () => {
     const handleShift = (id) => {
 
         // const role = { role: "shift" }
-        // fetch(`http://localhost:5000/orders/${id}`, {
+        // fetch(`https://cryptic-badlands-38526.herokuapp.com/orders/${id}`, {
         //     method: "PATCH",
         //     headers: {
         //         'content-type': "application/json",
@@ -57,7 +57,7 @@ const AllOrder = () => {
                         icon: "success",
                     })
                     const role = { role: "shift" }
-                    fetch(`http://localhost:5000/orders/${id}`, {
+                    fetch(`https://cryptic-badlands-38526.herokuapp.com/orders/${id}`, {
                         method: "PATCH",
                         headers: {
                             'content-type': "application/json",
@@ -95,7 +95,7 @@ const AllOrder = () => {
                         icon: "success",
                     })
 
-                    const url = `http://localhost:5000/orders/${id}`
+                    const url = `https://cryptic-badlands-38526.herokuapp.com/orders/${id}`
                     fetch(url, {
                         method: "DELETE"
                     })
