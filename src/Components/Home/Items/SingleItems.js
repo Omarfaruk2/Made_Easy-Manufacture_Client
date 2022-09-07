@@ -37,10 +37,12 @@ const SingleItems = ({ item }) => {
                 <div className="card-body  py-0 pb-3">
                     <h2 className="text-2xl font-bold text-center"> {name}</h2>
 
-                    {/* <p>{description}</p> */}
-                    <b> <p>Per Unit Price: ${price}</p>
-                        <p>Avilable Quantity: {avilablequantity}</p>
-                        <p>Minimum Quantity: {minquantity}</p></b>
+                    <b>
+                        <p className='my-2 text-xl'>Avilable Quantity: {avilablequantity}</p>
+                        <p className='my-2 text-xl'>Minimum Quantity: {minquantity}</p>
+                        <p className='my-2 text-xl  text-red-400'>Per Unit Price: ${price}</p>
+
+                    </b>
                     <div className="card-actions">
                         <p className='text-center'> <button onClick={() => handleOrderpage()} className="btn my-5 btn-primary">Purchase  Now</button></p>
                     </div>
