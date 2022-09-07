@@ -27,23 +27,55 @@ const AllOrder = () => {
 
     const handleShift = (id) => {
 
-        const role = { role: "shift" }
-        fetch(`http://localhost:5000/orders/${id}`, {
-            method: "PATCH",
-            headers: {
-                'content-type': "application/json",
-                "authorization": `Bearer ${localStorage.getItem("accessToken")}`
-            },
-            body: JSON.stringify(role)
+        // const role = { role: "shift" }
+        // fetch(`http://localhost:5000/orders/${id}`, {
+        //     method: "PATCH",
+        //     headers: {
+        //         'content-type': "application/json",
+        //         "authorization": `Bearer ${localStorage.getItem("accessToken")}`
+        //     },
+        //     body: JSON.stringify(role)
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data)
+        //         refetch()
+        //     })
+
+
+        swal({
+            title: "Are you sure to shift items?",
+            text: "Once Shift, you will not be able to recover this Shift File!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                refetch()
+            .then((willDelete) => {
+                if (willDelete) {
+                    refetch()
+                    swal("This order has been Shift", {
+                        icon: "success",
+                    })
+                    const role = { role: "shift" }
+                    fetch(`http://localhost:5000/orders/${id}`, {
+                        method: "PATCH",
+                        headers: {
+                            'content-type': "application/json",
+                            "authorization": `Bearer ${localStorage.getItem("accessToken")}`
+                        },
+                        body: JSON.stringify(role)
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data)
+                            refetch()
+                        })
+
+                } else {
+                    swal("This order not shift !")
+                }
             })
 
-
-        // console.log("hello clicked", id, user)
     }
 
 

@@ -91,7 +91,7 @@ const Myprofile = () => {
                         </div>
 
                         <div className="card-body">
-                            <h2 className="card-title">{displayName}</h2>
+                            <h2 className="card-title">{displayName?.toUpperCase()}</h2>
                             <p className='text-xl font-mono'>Phone: {phone}</p>
                             <p className='text-xl font-mono'>Address: {address?.toUpperCase()}</p>
                             <p className='text-xl font-mono'>Country: {country?.toUpperCase()}</p>

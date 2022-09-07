@@ -45,30 +45,81 @@ const Alluser = () => {
     // start--------------------------------------------------------------------------------
 
     const makeAdmin = (email) => {
-        fetch(`https://cryptic-badlands-38526.herokuapp.com/user/admin/${email}`, {
-            method: 'PUT',
-            headers: {
-                "authorization": `Bearer ${localStorage.getItem("accessToken")}`
-            }
+
+
+        // fetch(`https://cryptic-badlands-38526.herokuapp.com/user/admin/${email}`, {
+        //     method: 'PUT',
+        //     headers: {
+        //         "authorization": `Bearer ${localStorage.getItem("accessToken")}`
+        //     }
+        // })
+        //     .then(res => {
+        //         if (res.status === 403) {
+        //             toast.error("Failed to make an admin")
+        //         }
+        //         return res.json()
+        //     }
+        //     )
+        //     .then(data => {
+        //         if (data.modifiedCount > 0) {
+        //             refetch()
+        //             toast.success(`Successfullly made an Admin`)
+        //         }
+        //     })
+
+
+        swal({
+            title: "Are you sure want to remove user?",
+            text: "Once deleted, you will not be able to recover user!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
         })
-            .then(res => {
-                if (res.status === 403) {
-                    toast.error("Failed to make an admin")
-                }
-                return res.json()
-            }
-
-
-            )
-            .then(data => {
-                if (data.modifiedCount > 0) {
-                    console.log(data)
+            .then((willDelete) => {
+                if (willDelete) {
                     refetch()
-                    toast.success(`Successfullly made an Admin`)
+                    swal("Successfullly made an Admin", {
+                        icon: "success",
+                    })
+
+
+                    fetch(`https://cryptic-badlands-38526.herokuapp.com/user/admin/${email}`, {
+                        method: 'PUT',
+                        headers: {
+                            "authorization": `Bearer ${localStorage.getItem("accessToken")}`
+                        }
+                    })
+                        .then(res => {
+                            if (res.status === 403) {
+                                toast.error("Failed to make an admin")
+                            }
+                            return res.json()
+                        }
+                        )
+                        .then(data => {
+                            if (data.modifiedCount > 0) {
+                                refetch()
+                                toast.success(`Successfullly made an Admin`)
+                            }
+                        })
+
+
+                } else {
+                    swal("Failed to make an admin")
                 }
-
-
             })
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     const handleuserDelete = (id) => {
@@ -116,10 +167,10 @@ const Alluser = () => {
             <h2 className='text-center text-3xl'>this is all user {data?.length}</h2>
 
             <div className="overflow-x-auto">
-                <table className="table-responstable table-responstable-zebra w-full">
+                <table className="table w-full">
                     {/* <!-- head --> */}
                     <thead>
-                        <tr className='bg-base-300'>
+                        <tr className='bg-base-300 text-center'>
                             <th>Serial</th>
                             <th>Email</th>
                             <th>Make Admin</th>
@@ -127,16 +178,15 @@ const Alluser = () => {
 
                         </tr>
                     </thead>
-                    <tbody className='text-center p-4'>
+                    <tbody className='text-center '>
                         {
                             data?.map((user, index) => <tr
                                 key={user._id}
-                                className="table-responsactive">
+                            >
                                 <th>{index + 1}</th>
                                 <td>{user?.email}</td>
                                 <td> {user?.role !== "admin" && <button onClick={() => makeAdmin(user?.email)} className='btn btn-xs'>Make Admin</button>} </td>
                                 <td> <button onClick={() => handleuserDelete(user?._id)} className='btn btn-xs btn-error'>Remove User</button> </td>
-
 
                             </tr>)
                         }

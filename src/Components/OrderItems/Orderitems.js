@@ -20,7 +20,7 @@ const Orderitems = () => {
     const param = useParams()
     const { id } = param
 
-    const { isLoading, error, data } = useQuery(['singleData'], () =>
+    const { isLoading, error, data, refetch } = useQuery(['singleData'], () =>
         fetch(`https://cryptic-badlands-38526.herokuapp.com/items/${id}`).then(res =>
             res.json()
         )
@@ -42,6 +42,8 @@ const Orderitems = () => {
         let voo = { address, phone, quantity, totalprice, email, name, image, username }
         console.log(voo)
 
+        refetch()
+
 
         const url = "https://cryptic-badlands-38526.herokuapp.com/orders"
         fetch(url, {
@@ -55,10 +57,9 @@ const Orderitems = () => {
             .then(result => {
                 if (result.insertedId);
                 voo = {}
-                navigate('/')
+                refetch()
+                navigate('/dashboard/order')
             })
-
-
 
     }
 
@@ -69,9 +70,6 @@ const Orderitems = () => {
     if (error) {
         return <p>{error.massage}</p>
     }
-
-
-
 
 
     return (

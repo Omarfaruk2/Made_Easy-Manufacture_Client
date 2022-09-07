@@ -18,6 +18,7 @@ import AddItems from './Components/Dashboard/AddItems'
 import Alluser from './Components/Dashboard/Alluser'
 import RequireAdmin from './Components/Share/RequireAdmin'
 import Payment from './Components/Dashboard/Payment'
+import ManageItems from './Components/Dashboard/ManageItems'
 // import AssigmetTask from './Components/Home/AssigmetTask'
 // https://made-easy-secound.web.app/
 // https://meet.google.com/aya-khtg-pwe
@@ -43,6 +44,7 @@ const App = () => {
           <Route path='allOrder' element={<RequireAdmin><AllOrder /></RequireAdmin>}></Route>
           <Route path='additem' element={<RequireAdmin><AddItems /></RequireAdmin>}></Route>
           <Route path='alluser' element={<RequireAdmin><Alluser /></RequireAdmin>}></Route>
+          <Route path='manageitems' element={<RequireAdmin><ManageItems /></RequireAdmin>}></Route>
 
         </Route>
 
