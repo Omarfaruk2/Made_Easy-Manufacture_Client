@@ -79,14 +79,14 @@ const Orderitems = () => {
 
             <div className='grid grid-cols-1'>
 
-                <div className="card w-2/6 bg-base-100 mt-10 shadow-2xl mx-auto">
+                <div className="card lg:w-2/6 sm:w-full bg-base-100 mt-10 shadow-2xl mx-auto">
                     <div className="card-body m-0 p-0">
                         <img src={image} alt="" />
                     </div>
                 </div>
 
                 {/*======================= user info ==============================*/}
-                <div className='grid grid-cols-2 my-10 items-center'>
+                <div className='grid lg:grid-cols-2 sm:grid-cols-1 my-10 items-center'>
                     <div>
                         {/* Details */}
                         <div className="card w-4/5 mx-auto bg-base-100 shadow-2xl">
@@ -123,16 +123,16 @@ const Orderitems = () => {
                             <p className='text-center'>{user?.email}</p>
 
                             {/* input start */}
-                            <form className='form-input' onSubmit={handleSubmit(onSubmit)}>
+                            <form className='form-input ' onSubmit={handleSubmit(onSubmit)}>
 
 
-                                <div className='flex justify-around'>
+                                <div className='lg:flex lg:justify-around'>
                                     <div className="form-control order-form">
                                         <label className="label">
                                             <span className="label-text">Your Address</span>
                                         </label>
 
-                                        <input {...register("address", { required: true })} type="text" placeholder='Address' className="input input-bordered  " />
+                                        <input {...register("address", { required: true })} type="text" placeholder='Address' className="input input-bordered " />
                                         <label className="label">
                                             <span className="label-text-alt"> {errors.address && <p>Address is required</p>}</span>
                                         </label>
@@ -151,19 +151,12 @@ const Orderitems = () => {
                                 {/*---------------------------------- avilable quantity price----------------------- */}
 
 
-                                <div className='flex justify-around'>
-
-
-
+                                <div className='lg:flex lg:justify-around'>
 
                                     <div className="form-control order-form">
                                         <label className="label">
                                             <span className="label-text">Order Quantity</span>
                                         </label>
-
-
-
-
 
                                         <input ref={valueRaf}
                                             min={minquantity}
@@ -171,7 +164,7 @@ const Orderitems = () => {
                                             onChange={() => setTotalPrice(valueRaf.current?.value * price)}
                                             // {...register("orderquantity")}
                                             // name="orderquantity"
-                                            type="number" placeholder="Quantity" className="input input-bordered w-48 " />
+                                            type="number" placeholder="Quantity" className="input input-bordered lg:w-48 " />
 
 
 

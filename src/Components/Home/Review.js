@@ -25,7 +25,7 @@ const Review = () => {
     return (
         <div className='my-14'>
             <h2 className='text-center font-bold text-4xl my-10'>Happy Customers Feedback</h2>
-            <div className='grid grid-cols-3 my-10'>
+            <div className='grid lg:grid-cols-3 sm:grid-cols-1 my-10'>
                 {
                     data.slice(data.length - 3, data.length).map(review => <SingleREviews
                         key={review?._id}

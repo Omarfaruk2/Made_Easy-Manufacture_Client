@@ -23,7 +23,7 @@ const Items = () => {
     return (
         <div className='bg-base-200 mt-12 pt-12'>
             <h2 className='text-center text-4xl text-primary my-16  font-bold'>Our Tools Collections</h2>
-            <div className='grid grid-cols-3'>
+            <div className='grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2'>
                 {
                     data?.map(item => <SingleItems
                         key={item?._id}

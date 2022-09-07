@@ -9,7 +9,7 @@ const BussneissSamary = () => {
     return (
         <div>
             <h2 className='text-center text-5xl font-bold my-16'>Our Business Summary</h2>
-            <div className=" grid w-full mx-auto mt-10 grid-cols-4 ">
+            <div className=" grid w-full mx-auto mt-10 lg:grid-cols-4 sm:grid-cols-1">
 
 
                 <div className='border-card p-8'>

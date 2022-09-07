@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import { useQuery } from 'react-query'
 import auth from '../../firebase.init'
 import Loadding from '../Share/Loadding'
+import "./MyProfile.css"
 
 const Myprofile = () => {
     const [user, loading,] = useAuthState(auth)
@@ -63,7 +64,7 @@ const Myprofile = () => {
 
         <div>
 
-            <div className='grid grid-cols-2'>
+            <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
 
                 {/* User Info */}
                 <div >
@@ -95,9 +96,7 @@ const Myprofile = () => {
                             <p className='text-xl font-mono'>Address: {address?.toUpperCase()}</p>
                             <p className='text-xl font-mono'>Country: {country?.toUpperCase()}</p>
                             <p className='text-xl font-mono'>Education: {education?.toUpperCase()}</p>
-                            <div className="card-actions justify-end">
-                                <button className="btn btn-primary">Update Your Profile</button>
-                            </div>
+
                         </div>
                     </div>
 
@@ -115,13 +114,15 @@ const Myprofile = () => {
                         {/* <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
                         <input type="text" placeholder="Type here" className="input w-full max-w-xs" /> */}
 
+
                         <input type="text" placeholder="Type Your Address"
-                            className="input my-3 input-bordered input-primary w-8/12 mx-auto"
+                            className="input my-3 input-bordered input-primary lg:w-8/12  my-profile-input  inline mx-auto"
                             {...register("address", { required: true })}
                         />
 
+
                         <input type="text" placeholder="Type Your Educational Background"
-                            className="input my-3 input-bordered input-primary w-8/12 mx-auto"
+                            className="input my-3 input-bordered input-primary w-8/12   lg:mx-auto"
                             {...register("education", { required: true })}
                         />
 

@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import { useQuery } from 'react-query'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import swal from 'sweetalert'
 import auth from '../../firebase.init'
 import Loadding from '../Share/Loadding'
 
@@ -70,6 +71,44 @@ const Alluser = () => {
             })
     }
 
+    const handleuserDelete = (id) => {
+
+        swal({
+            title: "Are you sure want to remove user?",
+            text: "Once deleted, you will not be able to recover user!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    refetch()
+                    swal("Poof! Your imaginary file has been deleted!", {
+                        icon: "success",
+                    })
+
+
+                    const url = `http://localhost:5000/user/${id}`
+                    console.log(id)
+                    fetch(url, {
+                        method: "DELETE"
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            if (data?.deletedCount > 0) {
+                                console.log(data, "Success to delete")
+                                refetch()
+                            }
+                        })
+
+                } else {
+                    swal("Your imaginary file is safe!")
+                }
+            })
+    }
+
+
+
     // End --------------------------------------------------------------------------------
 
     return (
@@ -96,7 +135,7 @@ const Alluser = () => {
                                 <th>{index + 1}</th>
                                 <td>{user?.email}</td>
                                 <td> {user?.role !== "admin" && <button onClick={() => makeAdmin(user?.email)} className='btn btn-xs'>Make Admin</button>} </td>
-                                <td> <button className='btn btn-xs btn-error'>Remove User</button> </td>
+                                <td> <button onClick={() => handleuserDelete(user?._id)} className='btn btn-xs btn-error'>Remove User</button> </td>
 
 
                             </tr>)

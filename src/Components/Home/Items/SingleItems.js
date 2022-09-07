@@ -38,7 +38,7 @@ const SingleItems = ({ item }) => {
                     <h2 className="text-2xl font-bold text-center"> {name}</h2>
 
                     {/* <p>{description}</p> */}
-                    <b> <p>Price per unit: ${price}</p>
+                    <b> <p>Per Unit Price: ${price}</p>
                         <p>Avilable Quantity: {avilablequantity}</p>
                         <p>Minimum Quantity: {minquantity}</p></b>
                     <div className="card-actions">

@@ -36,11 +36,10 @@ const Login = () => {
     }, [from, navigate, token])
 
     if (error || gerror) {
-        return (
-            <div>
-                <p>Error: {error.message}</p>
-            </div>
-        )
+
+        return <p>Error: {error.message}</p>
+
+
     }
 
     if (loading || gloading) {

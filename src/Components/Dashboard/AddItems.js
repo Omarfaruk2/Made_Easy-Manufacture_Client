@@ -1,13 +1,31 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from 'react-router-dom'
 
 const AddItems = () => {
-
+    const navigate = useNavigate()
 
 
     const { register, formState: { errors }, handleSubmit } = useForm()
 
-    const onSubmit = (data) => console.log(data)
+    const onSubmit = (data) => {
+
+        const url = "http://localhost:5000/items"
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.insertedId);
+                data = {}
+                navigate('/')
+            })
+        console.log(data)
+    }
 
 
     // const { _id, name, image, description, minquantity, avilablequantity, price } = item
