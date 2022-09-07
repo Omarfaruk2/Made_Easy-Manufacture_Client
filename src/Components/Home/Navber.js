@@ -36,7 +36,6 @@ const Navber = () => {
                             user && <CustomLink to="/dashboard">Dashboard</CustomLink>
                         }
                         <CustomLink to="/blog">Blog</CustomLink>
-                        <CustomLink to="/task">Task</CustomLink>
                         {
                             user ?
                                 // <button onClick={() => handlelogout()} className='btn'>Log Out</button> 
