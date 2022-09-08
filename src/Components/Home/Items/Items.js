@@ -22,11 +22,15 @@ const Items = () => {
     // console.log(data, "data")
 
     return (
-        <div className='bg-base-200 mt-12 pt-12'>
-            <h2 className='text-center text-4xl text-primary my-16  font-bold'>Our Tools Collections</h2>
+        <div className='bg-base-100 mt-12 pt-12'>
+            <h2
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+                className='text-center text-4xl text-primary my-10  font-bold'>Our Tools Collections</h2>
             <div className='grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2'>
                 {
-                    data?.map(item => <SingleItems
+                    data?.slice(0, 6).map(item => <SingleItems
                         key={item?._id}
                         item={item}
                     ></SingleItems>)

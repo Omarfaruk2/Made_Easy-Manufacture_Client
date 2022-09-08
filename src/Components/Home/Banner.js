@@ -10,10 +10,23 @@ const Banner = () => {
                     <div className="hero-overlay bg-opacity-40"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-lg card">
-                            <h1 className="mb-2 text-6xl font-serif ">Big Sales</h1> <br />
-                            <h1 className="mb-5 text-7xl font-bold "><span className='text-primary'>Hand</span> Tools <span className='text-primary'>Circular</span> Saw & <span className='text-primary'>Power</span> Saw</h1>
+                            <h1
+                                data-aos="fade-right"
+                                data-aos-easing="linear"
+                                data-aos-duration="1000"
+                                className="mb-2 text-6xl font-serif ">Big Sales</h1> <br />
 
-                            <button className="btn btn-primary  font-bold"> Get Started with  <span className='text-yellow-400 mx-2 text-2xl'> 19% </span>  Discount</button>
+                            <h1
+                                data-aos="fade-left"
+                                data-aos-easing="linear"
+                                data-aos-duration="1000"
+                                className="mb-5 text-7xl font-bold "><span className='text-primary'>Hand</span> Tools <span className='text-primary'>Circular</span> Saw & <span className='text-primary'>Power</span> Saw</h1>
+
+                            <button
+                                data-aos="fade-up"
+                                data-aos-easing="linear"
+                                data-aos-duration="1000"
+                                className="btn btn-primary  font-bold"> Get Started with  <span className='text-yellow-400 mx-2 text-2xl'> 19% </span>  Discount</button>
                         </div>
                     </div>
                 </div>

@@ -24,7 +24,9 @@ const Review = () => {
 
     return (
         <div className='my-14'>
-            <h2 className='text-center font-bold text-4xl my-10'>Happy Customers Feedback</h2>
+            <h2 className='text-center text-4xl text-primary mt-12  font-bold'>Happy Customers Feedback</h2>
+            <img className='mx-auto' width="80px" src="https://img.freepik.com/free-vector/violet-banner-design-white-background_1308-94115.jpg?w=740&t=st=1662614288~exp=1662614888~hmac=722e90f19677ac52cab91d0b969f4490b8adce5a9969ea323559fe93b424c70b" alt="" />
+
             <div className='grid lg:grid-cols-3 sm:grid-cols-1 my-10'>
                 {
                     data.slice(data.length - 3, data.length).map(review => <SingleREviews

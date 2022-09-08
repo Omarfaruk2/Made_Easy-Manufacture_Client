@@ -23,10 +23,11 @@ const SingleItems = ({ item }) => {
     return (
         <div>
             <div
-                data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
-                className="card w-4/5 my-8  bg-base-100 card-header mx-auto">
+                data-aos="zoom-in-down"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+
+                className="card w-4/5 my-8 bg-white card-header mx-auto">
                 <figure className="px-10 pt-10">
                     <img src={image} alt="Shoes" className="rounded-xl" />
                 </figure>
@@ -40,7 +41,11 @@ const SingleItems = ({ item }) => {
 
                 </b>
                 <div className="card-body  py-0 pb-3">
-                    <h2 className="text-2xl font-bold text-center"> {name}</h2>
+
+                    <div className='flex items-center justify-between'>
+                        <span className="text-2xl font-bold "> {name}</span>
+                        <div className="badge badge-secondary">NEW</div>
+                    </div>
 
                     <b>
                         <p className='my-2 text-xl'>Avilable Quantity: {avilablequantity}</p>

@@ -8,7 +8,9 @@ const BussneissSamary = () => {
 
     return (
         <div>
-            <h2 className='text-center text-5xl font-bold my-16'>Our Business Summary</h2>
+            <h2 className='text-center text-5xl  mt-16 font-momo'>Our <span className='text-primary'>Business</span> Summary</h2>
+            <img className='mx-auto' width="80px" src="https://img.freepik.com/free-vector/violet-banner-design-white-background_1308-94115.jpg?w=740&t=st=1662614288~exp=1662614888~hmac=722e90f19677ac52cab91d0b969f4490b8adce5a9969ea323559fe93b424c70b" alt="" />
+
             <div className=" grid w-full mx-auto mt-10 lg:grid-cols-4 sm:grid-cols-1">
 
 

@@ -1,0 +1,81 @@
+.after-text {
+    display: none;
+    color: white;
+    font-size: 20px;
+}
+
+.cus-card {
+    overflow: hidden;
+}
+
+.image {
+    transition: transform 1s, filter 1s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(100%);
+    position: relative;
+}
+
+.cus-card:hover .image {
+    filter: brightness(40%);
+    transform: scale(1.2);
+}
+
+.after-text {
+    transition: transform 1s, filter 1.5s ease-in-out;
+}
+
+.cus-card:hover .after-text {
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 14px;
+    margin-left: 20px;
+}
+
+
+
+
+.zoom {
+    position: relative;
+    overflow: hidden;
+}
+
+.zoom:before {
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    left: 50%;
+    opacity: 1;
+    position: absolute;
+    right: 51%;
+    top: 0;
+    -webkit-transition: all 700ms ease-in 0s;
+    transition: all 700ms ease-in 0s;
+    pointer-events: none;
+}
+
+.zoom:after {
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+    bottom: 50%;
+    content: "";
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    pointer-events: none;
+    -webkit-transition: all 700ms ease-in 0s;
+    transition: all 700ms ease-in 0s;
+}
+
+.zoom:hover:before {
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.zoom:hover:after {
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+}
