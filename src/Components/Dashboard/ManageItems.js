@@ -55,7 +55,12 @@ const ManageItems = () => {
 
     return (
         <div>
-            <div>
+            <div
+                data-aos="fade-left"
+                data-aos-anchor="#example-anchor"
+                data-aos-offset="500"
+                data-aos-duration="1000"
+            >
                 <div className="overflow-x-auto">
                     <table className="table w-full">
                         {/* <!-- head --> */}

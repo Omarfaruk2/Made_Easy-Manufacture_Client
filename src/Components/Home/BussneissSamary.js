@@ -12,7 +12,11 @@ const BussneissSamary = () => {
             <div className=" grid w-full mx-auto mt-10 lg:grid-cols-4 sm:grid-cols-1">
 
 
-                <div className='border-card p-8'>
+                <div
+                    data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000"
+                    className='border-card p-8'>
                     <div className=' text-center'>
                         <p className='text-center'>
                             <Icon className='text-8xl mx-auto text-primary text-bold' icon="bx:like" inline={true} />
@@ -29,7 +33,11 @@ const BussneissSamary = () => {
 
 
 
-                <div className='border-card p-8'>
+                <div
+                    data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000"
+                    className='border-card p-8'>
                     <div className=' text-center'>
                         <p className='text-center'>
                             <Icon className='text-8xl mx-auto text-primary text-bold' icon="dashicons:money-alt" inline={true} />
@@ -47,7 +55,11 @@ const BussneissSamary = () => {
 
 
 
-                <div className='border-card p-8'>
+                <div
+                    data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000"
+                    className='border-card p-8'>
                     <div className=' text-center'>
                         <p className='text-center'>
                             <Icon className='text-8xl mx-auto text-primary text-bold' icon="fa6-solid:people-group" inline={true} />
@@ -63,7 +75,11 @@ const BussneissSamary = () => {
 
 
 
-                <div className='border-card p-8'>
+                <div
+                    data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000"
+                    className='border-card p-8'>
                     <div className=' text-center'>
                         <p className='text-center'>
                             <Icon className='text-8xl mx-auto text-primary text-bold' icon="fluent:collections-add-24-filled" inline={true} />

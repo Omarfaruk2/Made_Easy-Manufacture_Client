@@ -11,7 +11,10 @@ const SingleREviews = ({ review }) => {
     // console.log(review)
     return (
         <div >
-            <div className="card w-4/5 bg-base-100 py-8 shadow-2xl mx-auto">
+            <div
+                data-aos="flip-right"
+                data-aos-duration="2000"
+                className="card w-4/5 bg-base-100 py-8 shadow-2xl mx-auto">
 
                 <div className="avatar mx-auto object-cover">
                     <div className="w-16  rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 ">

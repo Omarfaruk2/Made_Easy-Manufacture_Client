@@ -23,7 +23,9 @@ const Navber = () => {
 
     // console.log(user?.photoURL)
     return (
-        <div className='z-40 sticky top-0 bg-white'>
+        <div
+            // data-aos="fade-down"
+            className='z-40 sticky top-0 bg-white'>
             <div className="navbar lg:py-2  z-30">
                 <div className="navbar-start">
                     {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}

@@ -15,9 +15,7 @@ const AllOrder = () => {
         )
     )
 
-
-
-    if (isLoading || loading) {
+    if (isLoading || loading || !user) {
         return <Loadding />
     }
     if (error) {
@@ -26,22 +24,6 @@ const AllOrder = () => {
 
 
     const handleShift = (id) => {
-
-        // const role = { role: "shift" }
-        // fetch(`https://cryptic-badlands-38526.herokuapp.com/orders/${id}`, {
-        //     method: "PATCH",
-        //     headers: {
-        //         'content-type': "application/json",
-        //         "authorization": `Bearer ${localStorage.getItem("accessToken")}`
-        //     },
-        //     body: JSON.stringify(role)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data)
-        //         refetch()
-        //     })
-
 
         swal({
             title: "Are you sure to shift items?",
@@ -118,7 +100,12 @@ const AllOrder = () => {
     return (
         <div>
             <div>
-                <div className="overflow-x-auto">
+                <div
+                    data-aos="fade-left"
+                    data-aos-anchor="#example-anchor"
+                    data-aos-offset="500"
+                    data-aos-duration="1000"
+                    className="overflow-x-auto">
                     <table className="table w-full">
                         {/* <!-- head --> */}
                         <thead>

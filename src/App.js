@@ -19,6 +19,7 @@ import Alluser from './Components/Dashboard/Alluser'
 import RequireAdmin from './Components/Share/RequireAdmin'
 import Payment from './Components/Dashboard/Payment'
 import ManageItems from './Components/Dashboard/ManageItems'
+import Blog from './Components/Blog/Blog'
 // import AssigmetTask from './Components/Home/AssigmetTask'
 // https://made-easy-secound.web.app/
 // https://meet.google.com/aya-khtg-pwe
@@ -50,6 +51,7 @@ const App = () => {
 
         <Route path="/login" element={<Login />} />
         <Route path="/singup" element={<Signup />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/order/:id" element={
           <RequireAuth>
             <Orderitems />

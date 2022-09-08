@@ -26,6 +26,10 @@ const Myprofile = () => {
         return <p>{error?.massage} </p>
     }
 
+    if (errors) {
+        console.log("errors 30 line")
+    }
+
     const personalcollection = data[0]
     const { phone, address, country, education, } = personalcollection || {}
 
@@ -62,13 +66,15 @@ const Myprofile = () => {
 
     return (
 
-        <div>
+        <div className='mt-20'>
 
             <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
 
                 {/* User Info */}
-                <div >
-                    <div className="card w-4/5 bg-base-100 shadow-2xl mx-auto">
+                <div className=''>
+                    <div
+                        data-aos="zoom-in-right" data-aos-duration="3000"
+                        className="card w-4/5 bg-base-100 shadow-2xl mx-auto">
 
                         <div className="card w-4/5 mx-auto bg-base-100 shadow-xl image-full">
                             <figure><img src="https://images.unsplash.com/photo-1586672806791-3a67d24186c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y292ZXIlMjBhcnR8ZW58MHx8MHx8&w=1000&q=80" alt="Shoes" /></figure>
@@ -105,7 +111,11 @@ const Myprofile = () => {
                 {/* ------------------------------------------------------------------------- */}
                 {/* User From */}
                 <div>
-                    <form className='mt-10' onSubmit={handleSubmit(onSubmit)}>
+                    <form
+                        data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000"
+                        className='mt-10' onSubmit={handleSubmit(onSubmit)}>
 
 
                         {/* <input {...register("firstName", { required: true })} />

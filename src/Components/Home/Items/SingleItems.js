@@ -1,5 +1,6 @@
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Icon } from '@iconify/react'
 import React from 'react'
 import Rating from 'react-rating'
 import { useNavigate } from 'react-router-dom'
@@ -21,7 +22,11 @@ const SingleItems = ({ item }) => {
 
     return (
         <div>
-            <div className="card w-4/5 my-8  bg-base-100 card-header mx-auto">
+            <div
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+                className="card w-4/5 my-8  bg-base-100 card-header mx-auto">
                 <figure className="px-10 pt-10">
                     <img src={image} alt="Shoes" className="rounded-xl" />
                 </figure>
@@ -44,7 +49,7 @@ const SingleItems = ({ item }) => {
 
                     </b>
                     <div className="card-actions">
-                        <p className='text-center'> <button onClick={() => handleOrderpage()} className="btn my-5 btn-primary">Purchase  Now</button></p>
+                        <p className='text-center'> <button onClick={() => handleOrderpage()} className="btn my-5 btn-primary">Purchase  Now <span className='text-xl font-bold mx-2'><Icon icon="el:shopping-cart" /></span></button></p>
                     </div>
                 </div>
             </div>
