@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react'
 import React from 'react'
 import { useQuery } from 'react-query'
 import swal from 'sweetalert'
@@ -87,7 +88,7 @@ const ManageItems = () => {
                                     <td>{order?.minquantity}</td>
                                     <td>{order?.avilablequantity}</td>
                                     <td><img width="50px" src={order?.image} alt="" /></td>
-                                    <td><button onClick={() => handleDeleteItems(order?._id)} className='btn btn-error'>Delete</button> </td>
+                                    <td><button onClick={() => handleDeleteItems(order?._id)} className='btn btn-error'><Icon icon="ant-design:delete-filled" />Delete</button> </td>
 
                                 </tr>)
                             }

@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react'
 import React from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link, Outlet } from 'react-router-dom'
@@ -27,20 +28,20 @@ const Dashboard = () => {
                 <label htmlFor="Dashboard-SIdebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto w-80 bg-base-300 text-base-content">
                     {/* <!-- Sidebar content here --> */}
-                    <li><Link to="/dashboard">My Profile</Link></li>
+                    <li><Link to="/dashboard"><Icon icon="healthicons:ui-user-profile" /> My Profile</Link></li>
 
                     {!admin &&
                         <>
-                            <li><Link to="/dashboard/order">My Order</Link></li>
-                            <li><Link to="/dashboard/addreview">Review</Link></li>
+                            <li><Link to="/dashboard/order"><Icon icon="icon-park-solid:transaction-order" /> My Order</Link></li>
+                            <li><Link to="/dashboard/addreview"><Icon icon="carbon:review" />Review</Link></li>
                         </>
                     }
                     {admin &&
                         <>
-                            <li><Link to="/dashboard/additem">Add Item</Link></li>
-                            <li><Link to="/dashboard/allOrder">All Order</Link></li>
-                            <li><Link to="/dashboard/alluser">All User</Link></li>
-                            <li><Link to="/dashboard/manageitems">Manage Items</Link></li>
+                            <li><Link to="/dashboard/additem"><Icon icon="bxs:add-to-queue" />Add Item</Link></li>
+                            <li><Link to="/dashboard/allOrder"><Icon icon="fluent:select-all-off-24-filled" />All Order</Link></li>
+                            <li><Link to="/dashboard/alluser"><Icon icon="fa-solid:users" />All User</Link></li>
+                            <li><Link to="/dashboard/manageitems"><Icon icon="ic:baseline-manage-accounts" />Manage Items</Link></li>
                         </>
                     }
 

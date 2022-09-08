@@ -169,7 +169,7 @@ const Alluser = () => {
             data-aos-offset="500"
             data-aos-duration="1000"
         >
-            <h2 className='text-center text-3xl'>this is all user {data?.length}</h2>
+            <h2 className='text-center text-3xl'>All Users: {data?.length}</h2>
 
             <div className="overflow-x-auto">
                 <table className="table w-full">

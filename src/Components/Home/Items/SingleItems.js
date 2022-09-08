@@ -54,7 +54,7 @@ const SingleItems = ({ item }) => {
 
                     </b>
                     <div className="card-actions">
-                        <p className='text-center'> <button onClick={() => handleOrderpage()} className="btn my-5 btn-primary">Purchase  Now <span className='text-xl font-bold mx-2'><Icon icon="el:shopping-cart" /></span></button></p>
+                        <p className='text-center'> <button onClick={() => handleOrderpage()} className="btn my-5 btn-primary">Purchase  Now <span className='text-xl font-bold mx-2'><Icon className="text-xl text-yellow-400" icon="el:shopping-cart" /></span></button></p>
                     </div>
                 </div>
             </div>

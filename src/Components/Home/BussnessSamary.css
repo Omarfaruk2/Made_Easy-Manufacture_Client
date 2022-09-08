@@ -1,3 +1,26 @@
 .border-card {
     border: 0.2px solid plum;
 }
+
+.blog {
+    border-left: 5px solid purple;
+}
+
+.blog-2 {
+    border: 2px solid rgb(223, 210, 210);
+}
+
+.blog-2 div div {
+    margin: 20px 0px;
+}
+
+.blog-link:hover,
+.blog-catagori span:hover {
+    color: orange;
+}
+
+.blog-catagori span {
+    font-size: 16px;
+    border-bottom: 2px solid gainsboro;
+    padding: 10px;
+}

@@ -43,7 +43,7 @@ const Myorder = () => {
 
 
     const handleDelete = (id) => {
-
+        refetch()
         swal({
             title: "Are you sure?",
             text: "Once deleted, you will not be able to recover this imaginary file!",
@@ -65,6 +65,7 @@ const Myorder = () => {
                         .then(res => res.json())
                         .then(data => {
                             if (data?.deletedCount > 0) {
+                                refetch()
                                 console.log(data, "Success to delete")
                                 // const remaining = users.filter(user => user._id !== id)
                                 // setUsers(remaining)
@@ -99,6 +100,10 @@ const Myorder = () => {
                             </tr>
                         </thead>
                         <tbody>
+
+                            {
+                                data?.length === 0 && <p className=' text-2xl text-red-500'>You Have No Order yet</p>
+                            }
                             {
                                 data?.map((order, index) => <tr
                                     key={index}

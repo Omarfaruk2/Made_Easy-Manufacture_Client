@@ -43,41 +43,49 @@ const Addreview = () => {
 
     }
     return (
-        <div className='bg-base-200 py-5'>
-            <div>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <p className='text-center mt-20'>
-                        <b>Give a Rating (1-5)
-                            <b className='text-center '>
-                                <Rating
-                                    initialRating={0}
-                                    emptySymbol={<FontAwesomeIcon icon={faStar} />}
-                                    fullSymbol={<FontAwesomeIcon style={{ color: 'goldenrod' }} icon={faStar} />} readonly
-                                ></Rating>
-                                {/* {rating} */}
+        <div className=' py-5'>
+            <h2 className='text-center text-3xl font-mono '>Feedback Is Always Welcome </h2>
+            <div className='grid grid-cols-2'>
+                <div data-aos="zoom-in-right" data-aos-duration="3000">
+                    <img src="https://i.ibb.co/b15q2XY/reviews-concept-landing-page-52683-12186-removebg-preview.png" alt="feedback" />
+                </div>
 
-                            </b>
-                        </b> <br />
-                        <input type="number" min="1" max="5" className="input input-bordered input-primary" {...register("rating", { required: true })} />
-                        {errors.firstName?.type === 'required' && "First name is required"}
+                <div
 
-                    </p>
+                    data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000"
+                    className="card h-[50vh] mt-10 w-4/5 mx-auto bg-base-100 card-header">
+                    <div className="card-body">
 
-                    <p className='text-center mt-5'>
-                        <b>Please Commment..</b> <br />
-                        <textarea className='w-2/6 input input-bordered input-primary' type="text" {...register("description", { required: true })}></textarea>
-                    </p>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <p className=' mt-10'>
+                                <b>Give a Rating (1-5)
+                                    <b className='text-center '>
+                                        <Rating
+                                            initialRating={0}
+                                            emptySymbol={<FontAwesomeIcon icon={faStar} />}
+                                            fullSymbol={<FontAwesomeIcon style={{ color: 'gold' }} icon={faStar} />} readonly
+                                        ></Rating>
+                                        {/* {rating} */}
 
-                    {/* <input {...register("lastName", { required: true })} />
-                    {errors.lastName && <p>Last name is required</p>}
+                                    </b>
+                                </b> <br />
 
-                    <input {...register("mail", { required: "Email Address is required" })} />
-                    <p>{errors.mail?.message}</p> */}
-                    <p className='text-center'>
-                        <button type="submit" className='btn btn-outline btn-primary mx-auto'>Add Review</button>
+                                <input type="number" min="1" max="5" className="input input-bordered input-primary" {...register("rating", { required: true })} />
+                                {errors.firstName?.type === 'required' && "First name is required"}
 
-                    </p>
-                </form>
+                            </p>
+
+                            <p className=' mt-5'>
+                                <b>Please Give US To Your Valuable FeedBack..</b> <br />
+                                <textarea className='w-4/5 input input-bordered input-primary' cols="20" rows="7" type="text" {...register("description", { required: true })}></textarea>
+                            </p>
+                            <button type="submit" className='btn btn-outline btn-primary mx-auto'>Add Review</button>
+                        </form>
+                    </div>
+
+                </div>
             </div>
         </div>
     )

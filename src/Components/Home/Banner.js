@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react'
 import React from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
@@ -26,7 +27,7 @@ const Banner = () => {
                                 data-aos="fade-up"
                                 data-aos-easing="linear"
                                 data-aos-duration="1000"
-                                className="btn btn-primary  font-bold"> Get Started with  <span className='text-yellow-400 mx-2 text-2xl'> 19% </span>  Discount</button>
+                                className="btn btn-primary  font-bold"> Get Started with  <span className='text-yellow-400 mx-2 text-2xl'> 19% </span><Icon className='text-yellow-400 text-2xl' icon="teenyicons:discount-solid" />  Discount</button>
                         </div>
                     </div>
                 </div>

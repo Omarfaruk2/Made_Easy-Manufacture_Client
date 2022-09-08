@@ -16,19 +16,14 @@ const Navber = () => {
     const handlelogout = () => {
         signOut(auth)
         localStorage.removeItem("accessToken")
-        // console.log("logout cliek")
     }
 
-    // console.log(user)
-
-    // console.log(user?.photoURL)
     return (
         <div
             // data-aos="fade-down"
-            className='z-40 sticky top-0 bg-white'>
+            className='z-40 sticky top-0 bg-base-200'>
             <div className="navbar lg:py-2  z-30">
                 <div className="navbar-start">
-                    {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}
                     <img className='lg:w-2/5 sm:w-1/2 ml-10' src="https://i.ibb.co/hYWwWBy/afaf4656a4c04dfd88811474f1d7fea0-removebg-preview.png" alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -40,7 +35,6 @@ const Navber = () => {
                         <CustomLink to="/blog">Blog</CustomLink>
                         {
                             user ?
-                                // <button onClick={() => handlelogout()} className='btn'>Log Out</button> 
                                 <div>
                                     <button className='logoutbutton' onClick={() => handlelogout()} href="">Log Out</button>
                                 </div>

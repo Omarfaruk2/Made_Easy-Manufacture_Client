@@ -48,11 +48,10 @@ const Login = () => {
     return (
 
         <div>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="felx items-center grid grid-cols-2">
+            <div className=" min-h-screen bg-base-100">
+                <div className=" grid grid-cols-2">
                     <div className="text-center lg:text-left w-5/6 mx-auto">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <img src="https://i.ibb.co/T2PGTXX/tablet-login-concept-illustration-114360-7873-removebg-preview.png" alt="" />
                     </div>
 
                     <div className="card flex-shrink-0 w-4/6 shadow-2xl mx-auto bg-base-100">
