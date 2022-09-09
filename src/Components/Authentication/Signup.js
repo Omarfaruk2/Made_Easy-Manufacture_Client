@@ -52,7 +52,7 @@ const Signup = () => {
 
     return (
         <div>
-            <div className='grid grid-cols-4 my-10'>
+            <div className='grid lg:grid-cols-4 sm:grid-cols-1 my-10'>
 
                 <div className='w-4/5 mx-auto col-span-2'>
                     <img src="https://i.ibb.co/MS8q31b/sign-up-concept-illustration-114360-7875-removebg-preview.png" alt="Sign up page" />
@@ -101,8 +101,8 @@ const Signup = () => {
 
                                 <label className="label">
 
-
-                                    <Link to="/login">Login</Link>
+                                    <p>Already have an account? <Link className="text-primary underline" to="/login">Please Login</Link></p>
+                                    {/* <Link to="/login">Login</Link> */}
 
                                 </label>
                             </div>

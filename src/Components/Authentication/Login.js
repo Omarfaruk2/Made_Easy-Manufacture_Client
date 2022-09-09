@@ -49,7 +49,7 @@ const Login = () => {
 
         <div>
             <div className=" min-h-screen bg-base-100">
-                <div className=" grid grid-cols-2">
+                <div className=" grid lg:grid-cols-2 sm:grid-cols-1">
                     <div className="text-center lg:text-left w-5/6 mx-auto">
                         <img src="https://i.ibb.co/T2PGTXX/tablet-login-concept-illustration-114360-7873-removebg-preview.png" alt="" />
                     </div>
@@ -88,10 +88,11 @@ const Login = () => {
                                     <input type="password" placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
                                     <p>{errors.password?.message}</p>
 
-                                    <label className="label">
-                                        <button>Forgot password?</button>
+                                    <label className="label ">
+                                        <button>Forgot password?</button> <br /> <br />
+                                        <p>New to Made Easy Menufacturere? <Link className="text-primary underline" to="/singup">Creat new account</Link></p>
 
-                                        <Link to="/singup">SingUp</Link>
+                                        {/* <Link to="/singup">SingUp</Link> */}
 
                                     </label>
                                 </div>

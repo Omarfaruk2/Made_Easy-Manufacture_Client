@@ -10,7 +10,7 @@ const SingleREviews = ({ review }) => {
     const { name, image, description, rating } = review || {}
     // console.log(review)
     return (
-        <div >
+        <div className='sm:mt-10'>
             <div
                 data-aos="flip-right"
                 data-aos-duration="2000"

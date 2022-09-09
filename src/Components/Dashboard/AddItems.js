@@ -43,13 +43,13 @@ const AddItems = () => {
 
                         {/* name */}
 
-                        <div className="form-control lg:w-5/12 my-0 mr-0 ml-6 inline-block mx-auto" >
+                        <div className="form-control lg:w-5/12 sm:w-full my-0 mr-0 ml-6 inline-block mx-auto" >
                             <label className="label">
                                 <span className="label-text">Item Name</span>
                             </label>
                             <input
                                 {...register("name", { required: true })} type="text"
-                                placeholder="Type here" className="input input-bordered w-11/12" />
+                                placeholder="Type here" className="input input-bordered sm:w-full lg:w-11/12" />
                             <label className="label">
                                 <span className="label-text-alt">{errors.name && <p>Last name is required</p>}</span>
                             </label>
@@ -64,7 +64,7 @@ const AddItems = () => {
                             </label>
                             <input
                                 {...register("image", { required: true })} type="url"
-                                placeholder="Type here" className="input input-bordered w-11/12" />
+                                placeholder="Type here" className="input input-bordered sm:w-full lg:w-11/12" />
                             <label className="label">
                                 <span className="label-text-alt">{errors.image && <p>Last name is required</p>}</span>
                             </label>
@@ -78,7 +78,7 @@ const AddItems = () => {
                             </label>
                             <input
                                 {...register("minquantity", { required: true })} type="number"
-                                placeholder="Type here" className="input input-bordered w-11/12" />
+                                placeholder="Type here" className="input input-bordered sm:w-full lg:w-11/12" />
                             <label className="label">
                                 <span className="label-text-alt">{errors.minquantity && <p>Last name is required</p>}</span>
                             </label>
@@ -92,7 +92,7 @@ const AddItems = () => {
                             </label>
                             <input
                                 {...register("avilablequantity", { required: true })} type="number"
-                                placeholder="Type item available" className="input input-bordered w-11/12" />
+                                placeholder="Type item available" className="input input-bordered sm:w-full lg:w-11/12" />
                             <label className="label">
                                 <span className="label-text-alt">{errors.avilablequantity && <p>Last name is required</p>}</span>
                             </label>
@@ -106,7 +106,7 @@ const AddItems = () => {
                             </label>
                             <input
                                 {...register("price", { required: true })} type="number"
-                                placeholder="Type items price" className="input input-bordered w-11/12" />
+                                placeholder="Type items price" className="input input-bordered sm:w-full lg:w-11/12" />
                             <label className="label">
                                 <span className="label-text-alt">{errors.price && <p>Last name is required</p>}</span>
                             </label>

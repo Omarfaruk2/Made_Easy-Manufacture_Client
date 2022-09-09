@@ -10,7 +10,7 @@ const Contact = () => {
         <div className='my-20'>
             <h2 className='text-center text-4xl mt-12 font-mono'>Contact Us</h2>
             <img className='mx-auto' width="80px" src="https://img.freepik.com/free-vector/violet-banner-design-white-background_1308-94115.jpg?w=740&t=st=1662614288~exp=1662614888~hmac=722e90f19677ac52cab91d0b969f4490b8adce5a9969ea323559fe93b424c70b" alt="" />
-            <div className='grid grid-cols-2'>
+            <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
 
                 {/* Text-left */}
                 <div

@@ -25,7 +25,7 @@ const ExtraTools = () => {
     return (
         <div>
             <h2 className='text-center text-4xl font-bold text-purple-900 my-20'> Where Use Our Tool</h2>
-            <div className='grid grid-cols-3 w-11/12 mx-auto gap-3'>
+            <div className='grid lg:grid-cols-3 sm:grid-cols-2 w-11/12 mx-auto gap-3'>
 
                 {
                     data.map(use => <SingleExtratoll
