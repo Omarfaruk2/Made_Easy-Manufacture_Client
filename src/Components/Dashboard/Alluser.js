@@ -47,27 +47,6 @@ const Alluser = () => {
     const makeAdmin = (email) => {
 
 
-        // fetch(`https://cryptic-badlands-38526.herokuapp.com/user/admin/${email}`, {
-        //     method: 'PUT',
-        //     headers: {
-        //         "authorization": `Bearer ${localStorage.getItem("accessToken")}`
-        //     }
-        // })
-        //     .then(res => {
-        //         if (res.status === 403) {
-        //             toast.error("Failed to make an admin")
-        //         }
-        //         return res.json()
-        //     }
-        //     )
-        //     .then(data => {
-        //         if (data.modifiedCount > 0) {
-        //             refetch()
-        //             toast.success(`Successfullly made an Admin`)
-        //         }
-        //     })
-
-
         swal({
             title: "Are you sure want to remove user?",
             text: "Once deleted, you will not be able to recover user!",
@@ -108,16 +87,6 @@ const Alluser = () => {
                     swal("Failed to make an admin")
                 }
             })
-
-
-
-
-
-
-
-
-
-
 
 
     }
