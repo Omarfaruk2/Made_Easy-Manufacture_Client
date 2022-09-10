@@ -9,8 +9,6 @@
 <h4>There is some admin specefic route like 'Make admin' and 'Manage all order'</h4>
 <h4>User can pay his order by any kind of credit card by clicking pay button</h4>
 
-## Admin Email: *@gmail.com
-## Password : **
 
 ## Live site link: "https://made-easy-secound.web.app/"
 ## Client site Git: "https://github.com/Omarfaruk2/madeeasy-secound"
