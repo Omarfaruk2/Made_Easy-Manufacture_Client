@@ -21,7 +21,7 @@ const Navber = () => {
     return (
         <div
             // data-aos="fade-down"
-            className='z-40 sticky top-0 bg-base-100'>
+            className='z-40 sticky top-0 bg-base-100 navshow'>
             <div className="navbar lg:py-1  z-30">
                 <div className="navbar-start">
                     <img className='lg:w-2/5 sm:w-1/2 ml-10' src="https://i.ibb.co/hYWwWBy/afaf4656a4c04dfd88811474f1d7fea0-removebg-preview.png" alt="" />

@@ -13,6 +13,7 @@ import CheckoutForm from './CheckoutForm'
 const stripePromise = loadStripe('pk_test_51LeXLzL5n1xpiLWTlF6rrENWjtWxLkXSWYutMlZtdJlooW1pKVoS2CgwImrGfCIdOlOCPchsTQYxPr8NRWiq6VHi00JEeo3nmY')
 
 const Payment = () => {
+
     const { id } = useParams()
     const [user, loading,] = useAuthState(auth)
 
@@ -50,8 +51,8 @@ const Payment = () => {
 
 
     return (
-        <div className=''>
 
+        <div className=''>
             <div className="card w-50 max-w-md mx-auto  bg-base-100 shadow-xl my-12">
                 <div className="card-body">
                     <p>Hello, <span className='text-primary text-2xl'> {user?.displayName}</span></p>

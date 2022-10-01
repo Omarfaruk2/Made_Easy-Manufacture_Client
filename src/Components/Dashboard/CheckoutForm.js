@@ -14,6 +14,7 @@ const CheckoutForm = ({ data }) => {
     const { totalprice, email, _id } = data
 
     useEffect(() => {
+
         fetch("https://cryptic-badlands-38526.herokuapp.com/create-payment-intent", {
             method: "POST",
             headers: {
