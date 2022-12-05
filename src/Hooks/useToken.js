@@ -7,7 +7,7 @@ const useToken = user => {
     useEffect(() => {
 
         const email = user?.user?.email
-        // const name = user?.user?.displayName
+        const name = user?.user?.displayName
         const currentUser = { email: email }
 
 
@@ -17,7 +17,7 @@ const useToken = user => {
         if (email) {
             // console.log(currentUser, "currentUser")
 
-            fetch(`https://cryptic-badlands-38526.herokuapp.com/user/${email}`, {
+            fetch(`https://made-easy-menufacture.onrender.com/user/${email}`, {
                 method: "PUT",
                 headers: {
                     'content-type': "application/json"

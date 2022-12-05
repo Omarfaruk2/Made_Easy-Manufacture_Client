@@ -15,7 +15,7 @@ const Alluser = () => {
     // start--------------------------------------------------------------------------------
 
     const { isLoading, error, data, refetch } = useQuery(['alluserdata'], () =>
-        fetch('https://cryptic-badlands-38526.herokuapp.com/user', {
+        fetch('https://made-easy-menufacture.onrender.com/user', {
             method: "GET",
             headers: {
                 "authorization": `Bearer ${localStorage.getItem("accessToken")}`
@@ -48,8 +48,8 @@ const Alluser = () => {
 
 
         swal({
-            title: "Are you sure want to remove user?",
-            text: "Once deleted, you will not be able to recover user!",
+            title: "Are you sure want to make an Admin?",
+            text: "Once deleted, you will not be able to make an Admin !",
             icon: "warning",
             buttons: true,
             dangerMode: true,
@@ -62,7 +62,7 @@ const Alluser = () => {
                     })
 
 
-                    fetch(`https://cryptic-badlands-38526.herokuapp.com/user/admin/${email}`, {
+                    fetch(`https://made-easy-menufacture.onrender.com/user/admin/${email}`, {
                         method: 'PUT',
                         headers: {
                             "authorization": `Bearer ${localStorage.getItem("accessToken")}`
@@ -108,7 +108,7 @@ const Alluser = () => {
                     })
 
 
-                    const url = `https://cryptic-badlands-38526.herokuapp.com/user/${id}`
+                    const url = `https://made-easy-menufacture.onrender.com/user/${id}`
                     console.log(id)
                     fetch(url, {
                         method: "DELETE"

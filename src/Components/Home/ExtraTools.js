@@ -12,15 +12,12 @@ const ExtraTools = () => {
         )
     )
 
-
     if (isLoading) {
         return <Loadding />
     }
     if (error) {
         return <p>{error.massage}</p>
     }
-    // console.log(data, "data")
-
 
     return (
         <div>

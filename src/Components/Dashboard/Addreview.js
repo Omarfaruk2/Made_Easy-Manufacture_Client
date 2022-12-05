@@ -24,7 +24,7 @@ const Addreview = () => {
         console.log(review)
 
 
-        const url = "https://cryptic-badlands-38526.herokuapp.com/reviews"
+        const url = "https://made-easy-menufacture.onrender.com/reviews"
         fetch(url, {
             method: 'POST',
             headers: {

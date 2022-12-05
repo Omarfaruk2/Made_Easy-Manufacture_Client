@@ -74,7 +74,9 @@ const Signup = () => {
                     {/* from */}
 
                     <div className="card-body w-full">
+
                         <form onSubmit={handleSubmit(onSubmit)}>
+
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>

@@ -10,7 +10,7 @@ const AddItems = () => {
 
     const onSubmit = (data) => {
 
-        const url = "https://cryptic-badlands-38526.herokuapp.com/items"
+        const url = "https://made-easy-menufacture.onrender.com/items"
         fetch(url, {
             method: 'POST',
             headers: {

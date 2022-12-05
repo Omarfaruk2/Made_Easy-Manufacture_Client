@@ -10,7 +10,7 @@ const AllOrder = () => {
     const [user, loading,] = useAuthState(auth)
 
     const { isLoading, error, data, refetch } = useQuery(['Allorder'], () =>
-        fetch("https://cryptic-badlands-38526.herokuapp.com/orders",).then(res =>
+        fetch("https://made-easy-menufacture.onrender.com/orders",).then(res =>
             res.json()
         )
     )
@@ -39,7 +39,7 @@ const AllOrder = () => {
                         icon: "success",
                     })
                     const role = { role: "shift" }
-                    fetch(`https://cryptic-badlands-38526.herokuapp.com/orders/${id}`, {
+                    fetch(`https://made-easy-menufacture.onrender.com/orders/${id}`, {
                         method: "PATCH",
                         headers: {
                             'content-type': "application/json",
@@ -77,7 +77,7 @@ const AllOrder = () => {
                         icon: "success",
                     })
 
-                    const url = `https://cryptic-badlands-38526.herokuapp.com/orders/${id}`
+                    const url = `https://made-easy-menufacture.onrender.com/orders/${id}`
                     fetch(url, {
                         method: "DELETE"
                     })

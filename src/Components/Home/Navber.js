@@ -33,6 +33,7 @@ const Navber = () => {
                             user && <CustomLink to="/dashboard">Dashboard</CustomLink>
                         }
                         <CustomLink to="/blog">Blog</CustomLink>
+
                         {
                             user ?
                                 <div>

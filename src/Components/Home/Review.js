@@ -7,7 +7,7 @@ import SingleREviews from './SingleREviews'
 const Review = () => {
 
     const { isLoading, error, data } = useQuery(['reviews'], () =>
-        fetch('https://cryptic-badlands-38526.herokuapp.com/reviews').then(res =>
+        fetch('https://made-easy-menufacture.onrender.com/reviews').then(res =>
             res.json()
         )
     )

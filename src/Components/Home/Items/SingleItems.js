@@ -30,7 +30,7 @@ const SingleItems = ({ item }) => {
     // --------------------------------------------------------------------------------------
 
     const { isLoading, error, data: alluser, refetch } = useQuery(['alluserdata'], () =>
-        fetch('https://cryptic-badlands-38526.herokuapp.com/user', {
+        fetch('https://made-easy-menufacture.onrender.com/user', {
             method: "GET",
             headers: {
                 "authorization": `Bearer ${localStorage.getItem("accessToken")}`

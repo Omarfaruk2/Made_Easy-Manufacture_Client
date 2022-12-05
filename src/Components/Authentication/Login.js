@@ -7,6 +7,7 @@ import Loadding from '../Share/Loadding'
 import useToken from '../../Hooks/useToken'
 
 const Login = () => {
+
     let location = useLocation()
     let from = location.state?.from?.pathname || "/"
     const navigate = useNavigate()

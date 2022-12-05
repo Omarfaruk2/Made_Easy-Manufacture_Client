@@ -13,7 +13,7 @@ const Myprofile = () => {
 
 
     const { isLoading, error, data } = useQuery(['updateuserdata'], () =>
-        fetch(`https://cryptic-badlands-38526.herokuapp.com/updateuser/${user?.email}`).then(res =>
+        fetch(`https://made-easy-menufacture.onrender.com/updateuser/${user?.email}`).then(res =>
             res.json()
         )
     )
@@ -47,7 +47,7 @@ const Myprofile = () => {
 
         const updateData = { email, address, country, education, phone, photo }
 
-        fetch(`https://cryptic-badlands-38526.herokuapp.com/updateuser/${email}`, {
+        fetch(`https://made-easy-menufacture.onrender.com/updateuser/${email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

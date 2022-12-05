@@ -6,8 +6,9 @@ import SingleItems from './SingleItems'
 
 const Items = () => {
 
-    const { isLoading, error, data } = useQuery(['repoData'], () =>
-        fetch('https://cryptic-badlands-38526.herokuapp.com/items').then(res =>
+    const { isLoading, error, data } = useQuery(['repoDatae'], () =>
+        // fetch('http://localhost:5000/items').then(res =>
+        fetch('https://made-easy-menufacture.onrender.com/items').then(res =>
             res.json()
         )
     )
@@ -19,7 +20,7 @@ const Items = () => {
     if (error) {
         return <p>{error.massage}</p>
     }
-    // console.log(data, "data")
+    console.log(data, "data")
 
     return (
         <div className='bg-base-100 mt-12 pt-12'>

@@ -15,7 +15,7 @@ const CheckoutForm = ({ data }) => {
 
     useEffect(() => {
 
-        fetch("https://cryptic-badlands-38526.herokuapp.com/create-payment-intent", {
+        fetch("https://made-easy-menufacture.onrender.com/create-payment-intent", {
             method: "POST",
             headers: {
                 'content-type': "application/json",
@@ -87,7 +87,7 @@ const CheckoutForm = ({ data }) => {
                 transactionId: paymentIntent.id
             }
 
-            fetch(`https://cryptic-badlands-38526.herokuapp.com/myitems/${_id}`, {
+            fetch(`https://made-easy-menufacture.onrender.com/myitems/${_id}`, {
                 method: "PATCH",
                 headers: {
                     'content-type': "application/json",

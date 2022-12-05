@@ -10,7 +10,7 @@ const useAdmin = user => {
         const email = user?.email
 
         if (email) {
-            fetch(`https://cryptic-badlands-38526.herokuapp.com/admin/${email}`, {
+            fetch(`https://made-easy-menufacture.onrender.com/admin/${email}`, {
                 method: "GET",
                 headers: {
                     'content-type': "application/json",

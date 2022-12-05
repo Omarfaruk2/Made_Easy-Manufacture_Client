@@ -1,38 +1,10 @@
 [
     {
-        "_id": "631975e854dd2000b772c322",
-        "name": "Building Stadium",
-        "image": "https://img.freepik.com/free-photo/man-working-with-angular-grinder-with-sparkles-from-it_181624-29243.jpg?size=626&ext=jpg&ga=GA1.2.1198299981.1652771125",
-        "description": "Cutting tools is a wedge-shaped and sharp-edged tools used to remove excess layers of material from a workpiece by shearing during machining to obtain the desired shape"
+        "email": "emon35293@gmail.com",
+        "role": "admin"
     },
     {
-        "_id": "631975e854dd20fdg00b772c322",
-        "name": "Fixing Tecnical Issu",
-        "image": "https://media.istockphoto.com/photos/technician-repairing-motherboard-picture-id1257448487?k=20&m=1257448487&s=612x612&w=0&h=71y_lcGt3n5RPKuTAmdy2NjJcBxCD55C1EvCSXCOpCw=",
-        "description": "Cutting tools is a wedge-shaped and sharp-edged tools used to remove excess layers of material from a workpiece by shearing during machining to obtain the desired shape"
-    },
-    {
-        "_id": "631975e854dd2dfg000b772c322",
-        "name": "Remove excess layer",
-        "image": "https://media.istockphoto.com/photos/concentrating-profile-mid-shot-woman-sanding-the-arm-of-a-chair-picture-id1014098984?k=20&m=1014098984&s=170667a&w=0&h=x5B_zy-6d7ui6zGAqEIUopG3eSEIoqVxuNn6BAaH_pM=",
-        "description": "Cutting tools is a wedge-shaped and sharp-edged tools used to remove excess layers of material from a workpiece by shearing during machining to obtain the desired shape"
-    },
-    {
-        "_id": "631975e85df4dd2000b772c322",
-        "name": "Shareing during machining",
-        "image": "https://media.istockphoto.com/photos/senior-man-bending-forged-metal-fence-picture-id1177009074?k=20&m=1177009074&s=170667a&w=0&h=qAUV9-7pxukSf3HHz4pOfGgpq5Avv_K-nqq1LiBUkiw=",
-        "description": "Cutting tools is a wedge-shaped and sharp-edged tools used to remove excess layers of material from a workpiece by shearing during machining to obtain the desired shape"
-    },
-    {
-        "_id": "631975e854dsdfd2000b772c322",
-        "name": "Obtain the desired shape",
-        "image": "https://media.istockphoto.com/photos/blue-collar-worker-in-the-workshop-picture-id1282985384?k=20&m=1282985384&s=612x612&w=0&h=DZm_oF7eGU2QZLfiY1k3fo6phYQaW0nlVogB-DnKhAI=",
-        "description": "Cutting tools is a wedge-shaped and sharp-edged tools used to remove excess layers of material from a workpiece by shearing during machining to obtain the desired shape"
-    },
-    {
-        "_id": "631975e854dsdfd2000b772c322",
-        "name": "Designed exclusively for metals.",
-        "image": "https://images.unsplash.com/photo-1505798577917-a65157d3320a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-        "description": "Cutting tools is a wedge-shaped and sharp-edged tools used to remove excess layers of material from a workpiece by shearing during machining to obtain the desired shape"
+        "email": "jamal@gmail.com",
+        "role": "admin"
     }
 ]

@@ -7,7 +7,7 @@ import Loadding from '../Share/Loadding'
 const ManageItems = () => {
 
     const { isLoading, error, data, refetch } = useQuery(['repoData'], () =>
-        fetch('https://cryptic-badlands-38526.herokuapp.com/items').then(res =>
+        fetch('https://made-easy-menufacture.onrender.com/items').then(res =>
             res.json()
         )
     )
@@ -35,7 +35,7 @@ const ManageItems = () => {
                         icon: "success",
                     })
 
-                    const url = `https://cryptic-badlands-38526.herokuapp.com/items/${id}`
+                    const url = `https://made-easy-menufacture.onrender.com/items/${id}`
                     fetch(url, {
                         method: "DELETE"
                     })

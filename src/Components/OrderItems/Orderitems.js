@@ -21,7 +21,7 @@ const Orderitems = () => {
     const { id } = param
 
     const { isLoading, error, data, refetch } = useQuery(['singleData'], () =>
-        fetch(`https://cryptic-badlands-38526.herokuapp.com/items/${id}`).then(res =>
+        fetch(`https://made-easy-menufacture.onrender.com/items/${id}`).then(res =>
             res.json()
         )
     )
@@ -45,7 +45,7 @@ const Orderitems = () => {
         refetch()
 
 
-        const url = "https://cryptic-badlands-38526.herokuapp.com/orders"
+        const url = "https://made-easy-menufacture.onrender.com/orders"
         fetch(url, {
             method: 'POST',
             headers: {

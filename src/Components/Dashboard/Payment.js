@@ -18,7 +18,7 @@ const Payment = () => {
     const [user, loading,] = useAuthState(auth)
 
     const { isLoading, error, data, refetch } = useQuery(['myorderpayments'], () =>
-        fetch(`https://cryptic-badlands-38526.herokuapp.com/myitems/${id}`, {
+        fetch(`https://made-easy-menufacture.onrender.com/myitems/${id}`, {
             method: "GET",
             headers: {
                 "authorization": `Bearer ${localStorage.getItem("accessToken")}`
