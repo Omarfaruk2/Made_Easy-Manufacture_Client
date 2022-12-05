@@ -100,7 +100,7 @@ const Orderitems = () => {
 
                     </div>
 
-                    {/* form */}
+                    {/* form  checkout*/}
                     <div className="card w-11/12 bg-base-100 shadow-2xl mx-auto ">
                         <div className="card-body">
 
