@@ -89,11 +89,11 @@ const Orderitems = () => {
                         {/* Details */}
                         <div className="card w-4/5 mx-auto bg-base-100 shadow-2xl">
                             <div className="card-body">
-                                <p className='font-bold text-3xl '>Category:{name}</p>
+                                <p className='font-bold text-3xl '>Category : {name}</p>
                                 <p className=''>{description}</p>
                                 <span>Id: {_id}</span>
                                 <p className='font-bold text-xl'>Per Single Cost: ${price}</p>
-                                <p className='font-bold text-xl'>Minimum Order Quantity: {minquantity}</p>
+                                <p className='font-bold text-xl'>Minimum Order Quantity : {minquantity}</p>
                                 <p className='font-bold text-xl'>Avilable Quantity: {avilablequantity}</p>
                             </div>
                         </div>
