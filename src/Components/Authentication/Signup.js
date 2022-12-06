@@ -82,7 +82,7 @@ const Signup = () => {
                                     <span className="label-text">Name</span>
                                 </label>
                                 <input type="text" placeholder="name" className="input input-bordered" {...register("displayName", { required: true })} />
-                                {errors.name?.type === 'required' && "First name is required"}
+                                {errors?.name?.type === 'required' && "First name is required"}
                             </div>
 
                             <div className="form-control">
@@ -90,7 +90,7 @@ const Signup = () => {
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="email" placeholder="email" className="input input-bordered" {...register("email", { required: "Email Address is required" })} />
-                                <p>{errors.email?.message}</p>
+                                <p>{errors?.email?.message}</p>
                             </div>
 
 
@@ -99,7 +99,7 @@ const Signup = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
-                                <p>{errors.password?.message}</p>
+                                <p>{errors?.password?.message}</p>
 
                                 <label className="label">
 
