@@ -12,7 +12,7 @@ const Testing = () => {
                     data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="2000"
-                    class="single-banner zoom mx-2">
+                    className="single-banner zoom mx-2">
                     <img src="https://htmldemo.net/jantrik/jantrik/img/banner/5.jpg" alt="slider-banner" />
                 </div>
 
@@ -20,7 +20,7 @@ const Testing = () => {
                     data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="2000"
-                    class="single-banner zoom mx-2">
+                    className="single-banner zoom mx-2">
                     <img src="https://htmldemo.net/jantrik/jantrik/img/banner/4.jpg" alt="slider-banner" />
                 </div>
 
@@ -28,7 +28,7 @@ const Testing = () => {
                     data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="2000"
-                    class="single-banner zoom mx-2">
+                    className="single-banner zoom mx-2">
                     <img src="https://htmldemo.net/jantrik/jantrik/img/banner/3.jpg" alt="slider-banner" />
                 </div>
 

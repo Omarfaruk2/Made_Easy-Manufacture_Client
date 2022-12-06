@@ -21,7 +21,7 @@ const Alluser = () => {
                 "authorization": `Bearer ${localStorage.getItem("accessToken")}`
             }
         }).then(res => {
-            // console.log("res", res)
+
             if (res.status === 401 || res.status === 403) {
                 signOut(auth)
                 localStorage.removeItem("accessToken")
@@ -109,14 +109,14 @@ const Alluser = () => {
 
 
                     const url = `https://made-easy-menufacture.onrender.com/user/${id}`
-                    console.log(id)
+                    // console.log(id)
                     fetch(url, {
                         method: "DELETE"
                     })
                         .then(res => res.json())
                         .then(data => {
                             if (data?.deletedCount > 0) {
-                                console.log(data, "Success to delete")
+                                // console.log(data, "Success to delete")
                                 refetch()
                             }
                         })

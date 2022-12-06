@@ -24,7 +24,7 @@ const AddItems = () => {
                 data = {}
                 navigate('/')
             })
-        console.log(data)
+
     }
 
 
