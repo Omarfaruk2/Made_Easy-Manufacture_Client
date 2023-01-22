@@ -11,7 +11,6 @@ const Items = () => {
             res.json()
         )
     )
-
     if (isLoading) {
         return <Loadding />
     }
@@ -35,7 +34,6 @@ const Items = () => {
                     ></SingleItems>)
                 }
             </div>
-
         </div>
     )
 }
